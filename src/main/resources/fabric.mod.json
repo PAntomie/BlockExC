@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "blockexc",
+  "version": "${version}",
+  "name": "blockexc",
+  "description": "C.Y.N.工作室内部项目",
+  "authors": [],
+  "contact": {},
+  "license": "LGPL-3.0",
+  "icon": "assets/blockexc/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "fabric-datagen": [
+      "dev.pages.antom.client.blockexcDataGenerator"
+    ],
+    "client": [
+      "dev.pages.antom.client.blockexcClient"
+    ],
+    "main": [
+      "dev.pages.antom.blockexc"
+    ]
+  },
+  "mixins": [
+    "blockexc.mixins.json",
+    {
+      "config": "blockexc.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
