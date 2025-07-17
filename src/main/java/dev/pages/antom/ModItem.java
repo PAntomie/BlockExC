@@ -9,6 +9,7 @@ import net.minecraft.util.Identifier;
 
 import java.util.function.Function;
 
+
 public class ModItem {
     public static Item register(String name, Function<Item.Settings, Item> itemFactory, Item.Settings settings) {
         RegistryKey<Item> itemKey = RegistryKey.of(RegistryKeys.ITEM, Identifier.of("blockexc", name));

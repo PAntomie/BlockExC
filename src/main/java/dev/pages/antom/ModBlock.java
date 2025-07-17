@@ -13,6 +13,7 @@ import net.minecraft.util.Identifier;
 
 import java.util.function.Function;
 
+
 public class ModBlock {
     private static Block register(String name, Function<AbstractBlock.Settings, Block> blockFactory, AbstractBlock.Settings settings, boolean shouldRegisterItem) {
         RegistryKey<Block> blockKey = keyOfBlock(name);
